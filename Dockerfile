@@ -11,8 +11,6 @@ RUN pip install -r requirements.txt
 # Copy the rest of your application code
 COPY . .
 
-# Set environment variables (if needed - best practice is to pass these at runtime)
-
 # Expose the port for Streamlit
 EXPOSE 8501
 

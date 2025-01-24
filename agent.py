@@ -1,5 +1,6 @@
 import os
 import csv
+from dotenv import load_dotenv
 
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
@@ -11,6 +12,8 @@ from langchain.agents.format_scratchpad.openai_tools import (
 from langchain.agents import AgentExecutor
 from langchain.agents.output_parsers.openai_tools import OpenAIToolsAgentOutputParser
 from langchain_openai import ChatOpenAI
+
+load_dotenv("./env")
 
 
 class GetOrderStatusInput(BaseModel):

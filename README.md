@@ -6,13 +6,13 @@ Insait-Chatbot is a user-friendly chatbot designed to handle customer support qu
 
 **Prerequisites:**
 
-*   Before running the chatbot, ensure you have set up the `.env` file with the correct OpenAI API key.
+*   Before running the chatbot, ensure you have set up the `env` file with the correct OpenAI API key.
 *   Docker (recommended for easy deployment)
 *   Python 3.6 or later (if running manually)
 
 ### Setting Up the OpenAI API Key
 
-1. Create a `.env` file at the root of your project with the following line:
+1. Edit the `env` file at the root of your project with the following line:
 
     ```bash
     OPENAI_API_KEY="YOUR_ACTUAL_API_KEY"
@@ -25,16 +25,23 @@ Insait-Chatbot is a user-friendly chatbot designed to handle customer support qu
 1.  Build the Docker image:
 
     ```bash
-    docker build -t insait-chatbot .
+    docker build -t insait-chatbot-image .
     ```
 
 2.  Run the container:
 
     ```bash
-    docker run -p 8501:8501 insait-chatbot
+    docker run -p 8501:8501 --env-file env --name insait-chatbot insait-chatbot-image
     ```
 
 3.  Open your web browser and navigate to `http://localhost:8501/`.
+
+4.  Stop the container:
+
+    ```bash
+    docker stop insait-chatbot
+    ```
+
 
 ### Running the Chatbot Manually
 
