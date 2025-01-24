@@ -1,5 +1,11 @@
 import os
 import csv
+from dotenv import load_dotenv
+
+# manually load the env file if there's no pre-existing environment variable
+if not os.getenv("OPENAI_API_KEY"):
+    print("Loading env file")
+    load_dotenv("env")
 
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field

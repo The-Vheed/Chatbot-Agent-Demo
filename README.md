@@ -2,6 +2,8 @@
 
 Insait-Chatbot is a user-friendly chatbot designed to handle customer support queries for your e-commerce platform. It can manage multi-turn conversations, providing accurate information on order status, return policies, and more. This versatile tool empowers you to enhance customer experience and streamline support operations.
 
+![Demo](test.png)
+
 ### Getting Started
 
 **Prerequisites:**
@@ -66,7 +68,7 @@ Insait-Chatbot is a user-friendly chatbot designed to handle customer support qu
 1.  Start the server:
 
     ```bash
-    streamlit run chatbot_ui.py
+    streamlit run chatbot_gui.py
     ```
 
 2.  Open your web browser and navigate to `http://localhost:8501/`.
