@@ -15,10 +15,10 @@ Insait-Chatbot is a user-friendly chatbot designed to handle customer support qu
 1. Edit the `env` file at the root of your project with the following line:
 
     ```bash
-    OPENAI_API_KEY="YOUR_ACTUAL_API_KEY"
+    OPENAI_API_KEY=sk-YOUR_ACTUAL_API_KEY
     ```
 
-2. Replace `YOUR_ACTUAL_API_KEY` with your actual OpenAI API key obtained from [OpenAI API](https://beta.openai.com/account/api-keys).
+2. Replace `sk-YOUR_ACTUAL_API_KEY` with your actual OpenAI API key obtained from [OpenAI API](https://beta.openai.com/account/api-keys).
 
 ### Running the Chatbot with Docker
 

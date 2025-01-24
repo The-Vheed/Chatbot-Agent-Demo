@@ -7,6 +7,3 @@ langchain
 # For LLM
 openai
 langchain_openai
-
-# Extras
-python-dotenv
