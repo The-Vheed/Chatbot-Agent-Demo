@@ -92,6 +92,7 @@ The chatbot interface is intuitive and straightforward. Simply type your questio
 **Additional Notes:**
 
 *   The chatbot is currently for assessment purposes, and its capabilities can be improved upon request.
+*   An Evaluation Report, which includes prompts, responses and metrics, has been provided in the Evaluation.csv file.
 *   For optimal performance, ensure you have a stable internet connection.
 
 I encourage you to explore the Insait-Chatbot and leverage its potential to enhance your customer support efforts.
