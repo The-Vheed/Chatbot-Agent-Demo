@@ -1,0 +1,9 @@
+# For UI
+streamlit
+
+# For LLM
+openai
+langchain_openai
+
+# Langchain libraries
+langchain
