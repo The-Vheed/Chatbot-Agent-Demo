@@ -20,7 +20,7 @@ from langchain_openai import ChatOpenAI
 
 
 class GetOrderStatusInput(BaseModel):
-    order_id: str = Field(description="The ID of the order")
+    order_id: int = Field(description="The ID of the order")
 
 
 @tool("GetOrderStatus", args_schema=GetOrderStatusInput, return_direct=False)
@@ -30,7 +30,13 @@ def GetOrderStatus(order_id):
     """
 
     # Simulate function to get the status of an order using the ID
-    return "Pending"
+    order_id_n = int(str(order_id)[0])
+    if order_id_n in [0, 1, 2, 3]:
+        return "Pending"
+    elif order_id_n in [4, 5, 6]:
+        return "Shipped"
+    elif order_id_n in [7, 8, 9]:
+        return "Delivered"
 
 
 @tool("GetAllReturnPolices", return_direct=False)
