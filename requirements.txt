@@ -1,9 +1,9 @@
 # For UI
 streamlit
 
+# Langchain library
+langchain
+
 # For LLM
 openai
 langchain_openai
-
-# Langchain libraries
-langchain

@@ -6,8 +6,37 @@ Insait-Chatbot is a user-friendly chatbot designed to handle customer support qu
 
 **Prerequisites:**
 
-*   Python 3.6 or later
-*   Streamlit (for GUI version)
+*   Before running the chatbot, ensure you have set up the `.env` file with the correct OpenAI API key.
+*   Docker (recommended for easy deployment)
+*   Python 3.6 or later (if running manually)
+
+### Setting Up the OpenAI API Key
+
+1. Create a `.env` file at the root of your project with the following line:
+
+    ```bash
+    OPENAI_API_KEY="YOUR_ACTUAL_API_KEY"
+    ```
+
+2. Replace `YOUR_ACTUAL_API_KEY` with your actual OpenAI API key obtained from [OpenAI API](https://beta.openai.com/account/api-keys).
+
+### Running the Chatbot with Docker
+
+1.  Build the Docker image:
+
+    ```bash
+    docker build -t insait-chatbot .
+    ```
+
+2.  Run the container:
+
+    ```bash
+    docker run -p 8501:8501 insait-chatbot
+    ```
+
+3.  Open your web browser and navigate to `http://localhost:8501/`.
+
+### Running the Chatbot Manually
 
 **Installation:**
 
@@ -24,8 +53,6 @@ Insait-Chatbot is a user-friendly chatbot designed to handle customer support qu
     ```bash
     pip install -r requirements.txt
     ```
-
-### Running the Chatbot
 
 **GUI Version:**
 
@@ -45,11 +72,6 @@ Insait-Chatbot is a user-friendly chatbot designed to handle customer support qu
     python3 chatbot_cli.py
     ```
 
-**Important Note:**
-
-*   Set your OpenAI API key as an environment variable named `OPENAI_API_KEY`. You can create a `.env` file at the root of your project with the following line: `OPENAI_API_KEY="YOUR_ACTUAL_API_KEY"`
-*   Replace `YOUR_ACTUAL_API_KEY` with your actual OpenAI API key obtained from [OpenAI API](https://www.google.com/url?sa=E&source=gmail&q=https://beta.openai.com/account/api-keys).
-
 ### Using the Chatbot
 
 The chatbot interface is intuitive and straightforward. Simply type your questions or requests, and the chatbot will respond accordingly.
@@ -62,7 +84,8 @@ The chatbot interface is intuitive and straightforward. Simply type your questio
 
 **Additional Notes:**
 
-*   The chatbot is currently for assessement purposes, and its capabilities can be improved upon request.
+*   The chatbot is currently for assessment purposes, and its capabilities can be improved upon request.
 *   For optimal performance, ensure you have a stable internet connection.
 
 I encourage you to explore the Insait-Chatbot and leverage its potential to enhance your customer support efforts.
+
