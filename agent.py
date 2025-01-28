@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 # manually load the env file if there's no pre-existing environment variable
 if not os.getenv("OPENAI_API_KEY"):
     print("Loading env file")
-    load_dotenv("env")
+    load_dotenv(".env")
 
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
@@ -92,7 +92,7 @@ def ExportUserData(full_name, email, phone) -> str:
         return f"An error occurred while saving contact information: {e}"
 
 
-llm = ChatOpenAI(temperature=0.1, model="gpt-4o")
+llm = ChatOpenAI(temperature=0.1, model="gpt-4o-mini")
 
 tools = [GetOrderStatus, GetAllReturnPolices, ExportUserData]
 # pkl.dump(tools, open('tools.pkl', 'wb'))
@@ -129,7 +129,7 @@ agent = (
     | OpenAIToolsAgentOutputParser()
 )
 
-agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=False)
+agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 
 
 def agent_invoke(prompt, chat_history=[""]):
