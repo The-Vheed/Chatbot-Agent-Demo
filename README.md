@@ -147,6 +147,8 @@ Insait-Chatbot is powered by **LangChain Agent Executor**, which dynamically int
 *   **Scale easily** by integrating additional services, such as inventory tracking or personalized recommendations.
 *   **Enhance customer experience** by intelligently managing multi-turn conversations.
 
+
+#### Documentation
 For a detailed explanation of how the chatbot agent works, including its architecture, components, and decision-making process, please refer to [docs/how_it_works.md](docs/how_it_works.md).
 
 ### Evaluation Summary
