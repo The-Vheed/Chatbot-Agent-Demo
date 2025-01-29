@@ -97,7 +97,7 @@ def ExportUserData(full_name, email, phone) -> str:
         return f"An error occurred while saving contact information: {e}"
 
 
-llm = ChatOpenAI(temperature=0.1, model="gpt-4o-mini")
+llm = ChatOpenAI(temperature=0.1, model="gpt-4o")
 
 tools = [GetOrderStatus, GetAllReturnPolices, ExportUserData]
 

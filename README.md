@@ -26,6 +26,10 @@ Insait-Chatbot is a user-friendly chatbot designed to handle customer support qu
 
 ```
 ./
+├── .github/
+│   └── workflows/
+│       └── main.yml  # GitHub Actions workflow for CI
+│
 ├── assets/
 │   └── demo.png  # Sample UI demo of the chatbot
 │
@@ -46,10 +50,15 @@ Insait-Chatbot is a user-friendly chatbot designed to handle customer support qu
 │   ├── __init__.py     # Test package initializer
 │   └── test_agent.py   # Unit tests for chatbot functionality
 │
-├── Dockerfile  # Configuration for containerizing the chatbot
-├── requirements.txt  # Required dependencies for running the chatbot
-├── README.md  # Project documentation
+├── .env                # Environment variables configuration file
+├── Dockerfile         # Configuration for containerizing the chatbot
+├── requirements.txt   # Required dependencies for running the chatbot
+├── README.md         # Project documentation
 ```
+
+### Continuous Integration
+
+The project includes a GitHub Actions workflow (`.github/workflows/main.yml`) that automatically runs the test suite on every push to the repository. This ensures code quality and catches potential issues early in the development process.
 
 ### Running the Chatbot with Docker
 
