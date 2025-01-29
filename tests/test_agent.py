@@ -5,7 +5,7 @@ from langchain_openai import ChatOpenAI
 from pydantic import ValidationError
 
 # Importing functions and classes from the main code
-from src.agent import (
+from app.agent import (
     GetOrderStatus,
     GetAllReturnPolices,
     ExportUserData,

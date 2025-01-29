@@ -15,5 +15,5 @@ COPY . .
 EXPOSE 8501
 
  # For CLI version - comment out the streamlit line and uncomment the CLI line
-CMD streamlit run src/chatbot_gui.py
+CMD streamlit run app/chatbot_gui.py
 # CMD python3 chatbot_cli.py

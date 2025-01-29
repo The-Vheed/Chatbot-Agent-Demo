@@ -40,7 +40,7 @@ Insait-Chatbot is a user-friendly chatbot designed to handle customer support qu
 │   ├── evaluation.csv        # Evaluation results of chatbot performance
 │   └── evaluation_report.md  # Detailed analysis and insights from the chatbot evaluation
 │
-├── src/
+├── app/
 │   ├── agent.py        # Main chatbot logic implemented using LangChain Agent Executor
 │   ├── chatbot_cli.py  # Command-line interface for interacting with the chatbot
 │   ├── chatbot_gui.py  # GUI-based chatbot interface using Streamlit
@@ -105,7 +105,7 @@ The project includes a GitHub Actions workflow (`.github/workflows/main.yml`) th
 1.  Start the server:
 
     ```bash
-    streamlit run src/chatbot_gui.py
+    streamlit run app/chatbot_gui.py
     ```
 
 2.  Open your web browser and navigate to `http://localhost:8501/`.
@@ -115,7 +115,7 @@ The project includes a GitHub Actions workflow (`.github/workflows/main.yml`) th
 1.  Run the script:
 
     ```bash
-    python3 src/chatbot_cli.py
+    python3 app/chatbot_cli.py
     ```
 
 ### Running Tests
