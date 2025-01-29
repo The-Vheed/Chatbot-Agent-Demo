@@ -6,6 +6,10 @@ from dotenv import load_dotenv
 if not os.getenv("OPENAI_API_KEY"):
     print("Loading env file")
     load_dotenv(".env")
+    
+# provide a default for testing
+if not os.getenv("OPENAI_API_KEY"):
+    os.environ["OPENAI_API_KEY"] = "YOUR_ACTUAL_API_KEY"
 
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field, validate_email
