@@ -51,7 +51,7 @@ if prompt := st.chat_input("Your message"):
             messages = []
 
             # Loop through last 10 messages and compile them for "History"
-            for msg in list(st.session_state.messages)[-10:]:
+            for msg in list(st.session_state.messages)[-20:]:
                 if msg["role"] == "user":
                     messages.append(HumanMessage(content=msg["content"]))
                 elif msg["role"] == "assistant":

@@ -8,7 +8,7 @@ if not os.getenv("OPENAI_API_KEY"):
     load_dotenv(".env")
 
 from langchain_openai import ChatOpenAI
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, validate_email
 from langchain.tools import tool
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.agents.format_scratchpad.openai_tools import (
@@ -65,7 +65,7 @@ def GetAllReturnPolices() -> str:
 
 class ExportUserDataInput(BaseModel):
     full_name: str = Field(description="Full name of the user")
-    email: str = Field(description="Email of the user")
+    email: str = Field(description="Email of the user")  # Validates email format
     phone: str = Field(description="Phone number of the user")
 
 
@@ -77,6 +77,7 @@ def ExportUserData(full_name, email, phone) -> str:
     filename = "user_data.csv"
     file_exists = os.path.exists(filename)
     try:
+        email = validate_email(email)[1]
         with open(
             filename, "a", newline="", encoding="utf-8"
         ) as csvfile:  # utf-8 encoding for special characters
@@ -95,7 +96,6 @@ def ExportUserData(full_name, email, phone) -> str:
 llm = ChatOpenAI(temperature=0.1, model="gpt-4o-mini")
 
 tools = [GetOrderStatus, GetAllReturnPolices, ExportUserData]
-# pkl.dump(tools, open('tools.pkl', 'wb'))
 
 prompt = ChatPromptTemplate.from_messages(
     [
@@ -129,13 +129,12 @@ agent = (
     | OpenAIToolsAgentOutputParser()
 )
 
-agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
+agent_executor = AgentExecutor(
+    agent=agent, tools=tools, handle_parsing_errors=True, verbose=True
+)
 
 
 def agent_invoke(prompt, chat_history=[""]):
     return agent_executor.invoke({"input": prompt, "chat_history": chat_history})[
         "output"
     ]
-
-
-# print(agent_invoke("What is the status of my order"))

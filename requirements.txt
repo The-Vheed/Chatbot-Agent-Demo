@@ -8,5 +8,9 @@ langchain
 openai
 langchain_openai
 
-# Extra
+# Extras
 python-dotenv
+pydantic[email]
+
+# For Tests
+pytest
