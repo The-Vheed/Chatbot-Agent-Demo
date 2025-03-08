@@ -1,6 +1,6 @@
-## Insait-Chatbot: Your E-commerce Conversational Agent
+## Chatbot-Agent: Your E-commerce Conversational Agent
 
-Insait-Chatbot is a user-friendly chatbot designed to handle customer support queries for your e-commerce platform. It can manage multi-turn conversations, providing accurate information on order status, return policies, and more. This versatile tool empowers you to enhance customer experience and streamline support operations.
+Chatbot-Agent is a user-friendly chatbot designed to handle customer support queries for your e-commerce platform. It can manage multi-turn conversations, providing accurate information on order status, return policies, and more. This versatile tool empowers you to enhance customer experience and streamline support operations.
 
 ![Demo](assets/demo.png)
 
